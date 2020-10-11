@@ -5,7 +5,9 @@ import App from './App.vue'
 // require('./queue/index')
 // require('./linked_list/index')
 // require('./hash_table/index')
-require('./tree/index')
+// require('./tree/index')
+require('./arrayList/index')
+
 
 
 

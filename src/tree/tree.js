@@ -39,6 +39,13 @@ export class BinarySearchTree {
     }
   }
 
+
+  //二叉树的遍历是指从根节点出发，按照某种次序依次访问二叉树中所有结点，使得每个结点被访问一次且仅被访问一次。
+  //1.前序遍历：规则是若二叉树为空，则空操作返回，否则先访问根结点，然后前序遍历左子树，再前序遍历右子树  
+  //2.中序遍历：规则是若树为空，则空操作返回，否则从根节点开始(注意并不是先访问根节点)，中序遍历根节点的左子树，然后是访问根节点，最后中序遍历右子树
+  //3.后序遍历：规则是若树为空，则空操作返回，否则从左到右先先叶子后结点的方式遍历访问左右子树，最后是访问根结点
+  //4.层序遍历：规则是若树为空，则空操作返回，否则从树的第一层，也就是根结点开始访问，从上而下逐层遍历，在同一层中，按从左到右的顺序对接点逐个访问。
+
   //先序遍历preOrderTraverse: 通过先序遍历方式遍历所有节点
   preOrderTraverse() {
     this.preOrderTraverseNode(this.root);
@@ -203,7 +210,7 @@ export class BinarySearchTree {
       } else {
         parent.right = successor;
       }
-      // successor.left = current.left;
+      successor.left = current.left;
     }
     return true;
   }
@@ -226,7 +233,7 @@ export class BinarySearchTree {
     if(successer != delNode.right) {
       successerParent.left = successer.right;
       successer.right = delNode.right;
-      successer.left = delNode.left;
+      // successer.left = delNode.left;
     } 
     return successer;
   }

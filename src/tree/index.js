@@ -36,5 +36,5 @@ console.log(bst);
 // console.log(bst.remove(8));
 
 
-console.log(bst.remove(7));
+console.log(bst.remove(9));
 bst.inOrderTraverse();
